@@ -22,7 +22,7 @@
 
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark " id="mainNav">
             <div class="container px-4 px-lg-5">
                 <a class="navbar-brand" href="index.html">Start Bootstrap</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,43 +36,55 @@
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="create.html">Add Post</a>
                         </li>
-                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a>
-                        </li> -->
+                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="post.html">Sample Post</a> -->
+                        <!-- </li> -->
+                        <!-- <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="contact.html">Contact</a> -->
+                        <!-- </li> -->
                     </ul>
                 </div>
             </div>
         </nav>
         <!-- Page Header-->
-        <header class="masthead" style="background-image: url('assets/img/home-bg.webp')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="site-heading">
-                            <h1>Welcome to your Blog</h1>
-                            <span class="subheading">Built using {JSON} Placeholder</span>
+        <header class=" mt-5 py-5 px-4 px-lg-5 bg-dark text-light">
+            <h2>Add a post</h2>
+            <form id="create-form">
+                <div class="form-group mb-5">
+                    <label for="post-title">Post Title</label>
+                    <input type="text" class="form-control-lg my-2 col-12 bg-dark" style="border: 1px solid white;"
+                        id="post-title" aria-describedby="post-title" placeholder="Enter your post title">
+                    <small id="post-title" class="form-text text-muted">Try to keep it short but concise.</small>
+                </div>
+                <div class="form-group">
+                    <label for="post-body">Post Body</label>
+                    <textarea name="post-body" style="border: 1px solid white;"
+                        class="form-control-lg col-12 my-2 bg-dark" id="post-body" cols="30" rows="10"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+
+            <div class="modal" id="modal" tabindex="-1">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="btn-close close-modal" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-modal"
+                                data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="to-home" onClick>To Posts</button>
                         </div>
                     </div>
                 </div>
             </div>
+
         </header>
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7" id="blog">
-                    <!-- Post preview-->
-
-                    <!-- Divider-->
-                    <!-- Post preview-->
-
-
-
-                </div>
-
-            </div>
-        </div>
         <!-- Footer-->
         <footer class="border-top">
             <div class="container px-4 px-lg-5">
@@ -116,7 +128,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        <script src="js/index.js"></script>
+        <script src="js/create.js"></script>
     </body>
 
 </html>
